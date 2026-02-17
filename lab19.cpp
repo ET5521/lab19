@@ -1,4 +1,5 @@
 // Please include header (lab21.h) here.
+#include "lab19.h"
 
 int main(){
 	srand(time(0));
@@ -20,9 +21,9 @@ int main(){
 		player_action = toupper(player_action);
 		if(player_action == 'E') break; 
 		
-		int temp = rand()%3;
-		if(temp <= 1) monster_action = 'A';
-		else if(temp == 2) monster_action = 'G';
+		int temp = rand()%3; // 0,1,2
+		if(temp <= 1) monster_action = 'A'; // 0,1
+		else if(temp == 2) monster_action = 'G';// 2
 		
 		if(player_action == 'G') hero.guard();
 		if(monster_action == 'G') mons.guard();
